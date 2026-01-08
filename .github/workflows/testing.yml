@@ -1,8 +1,8 @@
-name: Build on Ubuntu
+name: Automatic code check
 on: push
 
 jobs:
-  build:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
