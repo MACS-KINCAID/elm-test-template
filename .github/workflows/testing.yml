@@ -14,9 +14,20 @@ jobs:
           chmod +x elm
           sudo mv elm /usr/local/bin/
           elm --help
-      - name: Install elm-format and elm-test
+      - name: Install elm-format elm-test elm-review
         run: |
-          npm install -g elm-test elm-format
-      - name: Simple test
+          npm install -g elm-test elm-format elm-review
+      - name: Validate format
+        run: |
+          elm-format src/ --validate
+      - name: Run checks
+        run: |
+          elm-review \
+          --template jfmengels/elm-review-common/example \
+          --rules NoMissingTypeAnnotation,NoMissingTypeAnnotationInLetIn
+      - name: Build
+        run: |
+          elm make src/*
+      - name: Run tests
         run: |
           elm-test

@@ -3,4 +3,4 @@ module Simple exposing (..)
 
 double : Int -> Int
 double x =
-    x * 3
+    x * 2
