@@ -1,4 +1,4 @@
-module Simple exposing (..)
+module Helper exposing (..)
 
 
 double : Int -> Int
