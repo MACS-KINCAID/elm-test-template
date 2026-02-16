@@ -7,6 +7,10 @@ elm-format src/ --validate
 ```
 - Run checks
 ```bash
+# Linux & Windows
+elm-review
+```
+```bash
 # Linux
 elm-review --template jfmengels/elm-review-common/example --rules NoMissingTypeAnnotation,NoMissingTypeAnnotationInLetIn
 # Windows Powershell

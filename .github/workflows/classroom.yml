@@ -22,9 +22,7 @@ jobs:
           elm-format src/ --validate
       - name: Run checks
         run: |
-          elm-review \
-          --template jfmengels/elm-review-common/example \
-          --rules NoMissingTypeAnnotation,NoMissingTypeAnnotationInLetIn
+          elm-review
       - name: Build
         run: |
           elm make src/*
